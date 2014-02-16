@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB1C9AF2-E712-48EB-8585-4DF1FCD5C7D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MWSinmap</RootNamespace>
+    <AssemblyName>MWSinmap</AssemblyName>
+    <MyType>Windows</MyType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>MWSinmap.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>C:\Programmi\MapWindow\Plugins\my plugin\MWsinmap\</OutputPath>
+    <DocumentationFile>MWSinmap.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\Programmi\MapWindow\MapWindow.exe</StartProgram>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MapWindow.Interfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=14ba77d91dae5597, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Programmi\MapWindow\MapWindow.Interfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MapWinGeoProc, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Programmi\MapWindow\MapWinGeoProc.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MapWinInterfaces, Version=4.3.2771.37697, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Programmi\MapWindow\MapWinInterfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="StabilityModel, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\StabilityModel\StabilityModel\bin\Release\StabilityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.4.31904, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\zedgraph\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalRegion.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="form\frmCalParAdjust.Designer.vb">
+      <DependentUpon>frmCalParAdjust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmCalParAdjust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmCalParam.Designer.vb">
+      <DependentUpon>frmCalParam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmCalParam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmChart.Designer.vb">
+      <DependentUpon>frmChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmDefaultValue.Designer.vb">
+      <DependentUpon>frmDefaultValue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmDefaultValue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmProva.Designer.vb">
+      <DependentUpon>frmProva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmProva.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmSelectDemGrd.Designer.vb">
+      <DependentUpon>frmSelectDemGrd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmSelectDemGrd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmSelectShape.Designer.vb">
+      <DependentUpon>frmSelectShape.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmSelectShape.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmStatistics.Designer.vb">
+      <DependentUpon>frmStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmStatistics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\frmUseExCal.Designer.vb">
+      <DependentUpon>frmUseExCal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form\frmUseExCal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainClass.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Functions.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="form\frmCalParAdjust.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCalParAdjust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmCalParam.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmCalParam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmChart.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmChart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmDefaultValue.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmDefaultValue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmProva.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmProva.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmSelectDemGrd.resx">
+      <DependentUpon>frmSelectDemGrd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmSelectShape.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectShape.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmStatistics.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmStatistics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\frmUseExCal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUseExCal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="MapWinGIS">
+      <Guid>{C368D713-CC5F-40ED-9F53-F84FE197B96A}</Guid>
+      <VersionMajor>3</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>False</Private>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="adjcalpar.png" />
+    <Content Include="rextool.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

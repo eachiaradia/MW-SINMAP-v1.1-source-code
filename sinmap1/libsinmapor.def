@@ -1,0 +1,7 @@
+; dlltool --base-file C:\DOCUME~1\enrico\IMPOST~1\Temp/cca02892.base --output-exp sinmapor.exp --dllname sinmapor.dll --output-def libsinmapor.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\DOCUME~1\enrico\IMPOST~1\Temp/cca02892.def --output-lib libsinmapor.a
+EXPORTS
+	flood @ 1
+	setdir @ 2
+	sindex @ 3
+	siplot @ 4
+	area @ 5

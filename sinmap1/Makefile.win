@@ -1,0 +1,51 @@
+# Project: sinmapor
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = Area.o flood.o gridio.o Gridio_null.o lsmcom.o setdir.o sindex.o main.o $(RES)
+LINKOBJ  = Area.o flood.o gridio.o Gridio_null.o lsmcom.o setdir.o sindex.o main.o $(RES)
+LIBS =  -L"C:/programmi/Dev-Cpp/lib" --no-export-all-symbols --add-stdcall-alias  
+INCS =  -I"C:/programmi/Dev-Cpp/include"  -I"D:/enricodata/documenti/progetti/SInMap4MW"  -I"C:/Programmi/GIMP-2.0/gimp-dev-2.4/include/gimp-2.0"  -I"C:/Programmi/GtkRun/2.8/lib/gtk-2.0/include" 
+CXXINCS =  -I"C:/programmi/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/programmi/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/programmi/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/programmi/Dev-Cpp/include/c++/3.4.2"  -I"C:/programmi/Dev-Cpp/include" 
+BIN  = C:/Programmi/MapWindow/Plugins/MWsinmap/sinmap.exe
+CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1  
+CFLAGS = $(INCS) -DBUILDING_DLL=1  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before C:/Programmi/MapWindow/Plugins/MWsinmap/sinmap.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "C:\Programmi\MapWindow\Plugins\MWsinmap\sinmap.exe" $(LIBS)
+
+Area.o: Area.c
+	$(CC) -c Area.c -o Area.o $(CFLAGS)
+
+flood.o: flood.c
+	$(CC) -c flood.c -o flood.o $(CFLAGS)
+
+gridio.o: gridio.c
+	$(CC) -c gridio.c -o gridio.o $(CFLAGS)
+
+Gridio_null.o: Gridio_null.c
+	$(CC) -c Gridio_null.c -o Gridio_null.o $(CFLAGS)
+
+lsmcom.o: lsmcom.c
+	$(CC) -c lsmcom.c -o lsmcom.o $(CFLAGS)
+
+setdir.o: setdir.c
+	$(CC) -c setdir.c -o setdir.o $(CFLAGS)
+
+sindex.o: sindex.c
+	$(CC) -c sindex.c -o sindex.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
